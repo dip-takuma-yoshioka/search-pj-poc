@@ -1,0 +1,24 @@
+services:
+  elasticsearch:
+    build: ./elasticsearch
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+    networks:
+      - search-network
+
+  opensearch:
+    build: ./opensearch
+    container_name: opensearch
+    ports:
+      - "9201:9200"
+    networks:
+      - search-network
+
+networks:
+  search-network:
+    driver: bridge
+
+volumes:
+  es-data:
+  os-data:

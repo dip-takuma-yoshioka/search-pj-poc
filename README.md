@@ -1,1 +1,6 @@
 # search-pj-poc
+
+elasticsearchからopensearchへの移行の現実性を調査するPoC
+両方のdocker環境を用意し、両方に対してマッピングやクエリを実行して等しい部分と等しくない部分を調査する
+
+AIはこちらの指示に従って進めること

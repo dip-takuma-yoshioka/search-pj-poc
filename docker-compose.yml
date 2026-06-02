@@ -1,7 +1,10 @@
 services:
   elasticsearch:
     build: ./elasticsearch
+    platform: linux/arm64  # Macネイティブ（ARM64）で動作
     container_name: elasticsearch
+    environment:
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
     ports:
       - "9200:9200"
     networks:
@@ -9,6 +12,7 @@ services:
 
   opensearch:
     build: ./opensearch
+    platform: linux/arm64  # Macネイティブ（ARM64）で動作
     container_name: opensearch
     ports:
       - "9201:9200"

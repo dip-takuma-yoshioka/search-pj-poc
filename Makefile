@@ -3,8 +3,6 @@
 # Docker起動
 up:
 	docker-compose up -d
-	@echo "Waiting for services to be ready..."
-	@sleep 5
 
 # Docker停止
 down:
